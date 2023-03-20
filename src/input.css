@@ -32,7 +32,7 @@ body {
     }
 
     #container {
-        @apply h-[70%] w-full flex flex-col justify-around mb-32
+        @apply h-[70%] w-full flex flex-col justify-around mb-32 overflow-hidden
     }
 
     .card {
@@ -49,7 +49,7 @@ body {
     .faqContainer i {
         color : #c49c5d;
         @apply            
-        text-[35px] mr-3 cursor-pointer
+        text-[35px] mr-3 cursor-pointer hover:bg-red-100
     }
 
     .faqContainer h2 {
@@ -62,7 +62,23 @@ body {
 
     .answer{
         @apply
-        w-full h-[950px] overflow-y-auto p-3 mt-2 bg-[#E0AC69]
+        w-full overflow-y-auto bg-[#E0AC69] duration-[1500ms]
     }
+
+
+    .animation-1{
+
+        animation: fadeIn 0.5s;
+    }
+
+    @keyframes fadeIn {
+        from {
+             opacity: 0;
+        }
+   
+        to {
+             opacity: 1;
+        }
+   }
 
 }

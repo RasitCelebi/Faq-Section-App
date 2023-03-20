@@ -38,7 +38,7 @@ function onCreated() {
 
         let answerDiv = document.createElement('div');
         let attrClassAnswerDiv = document.createAttribute('class');
-        attrClassAnswerDiv.value = "answer hidden"
+        attrClassAnswerDiv.value = "answer invisible opacity-0 h-0"
         answerDiv.setAttributeNode(attrClassAnswerDiv);
         elementDivCard.appendChild(answerDiv);
 
@@ -60,11 +60,11 @@ function onCreated() {
                 case 0:
                     toggleClass(0);
 
-                    if (answers[1].classList.contains("block")) {
+                    if (answers[1].classList.contains("opacity-100")) {
                         toggleClass(1);
                     };
 
-                    if (answers[2].classList.contains("block")) {
+                    if (answers[2].classList.contains("opacity-100")) {
                         toggleClass(2);
                     };
 
@@ -73,11 +73,11 @@ function onCreated() {
                 case 1:
                     toggleClass(1);
 
-                    if (answers[0].classList.contains("block")) {
+                    if (answers[0].classList.contains("opacity-100")) {
                         toggleClass(0);
                     };
 
-                    if (answers[2].classList.contains("block")) {
+                    if (answers[2].classList.contains("opacity-100")) {
                         toggleClass(2);
                     };
 
@@ -86,11 +86,11 @@ function onCreated() {
                 case 2:
                     toggleClass(2);
 
-                    if (answers[0].classList.contains("block")) {
+                    if (answers[0].classList.contains("opacity-100")) {
                         toggleClass(0);
                     };
 
-                    if (answers[1].classList.contains("block")) {
+                    if (answers[1].classList.contains("opacity-100")) {
                         toggleClass(1);
                     };
 
@@ -109,8 +109,15 @@ function onCreated() {
     function toggleClass(index) {
         faqButtons[index].classList.toggle("fa-square-plus");
         faqButtons[index].classList.toggle("fa-square-minus");
-        answers[index].classList.toggle("hidden");
-        answers[index].classList.toggle("block");
+        answers[index].classList.toggle("invisible");
+        answers[index].classList.toggle("opacity-0");
+        answers[index].classList.toggle("opacity-100");
+        answers[index].classList.toggle("h-0");
+        answers[index].classList.toggle("h-auto");
+        answers[index].classList.toggle("p-3");
+        answers[index].classList.toggle("mt-2");
+      
+    
     }
 
 }
